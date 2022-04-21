@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 
 
@@ -31,7 +31,7 @@ body{
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
     border-radius: 10px;
     border: 2px solid black;
@@ -45,24 +45,27 @@ body{
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    background-color: rgb(240, 233, 233);
 }
 
 #title{
-    height: 40%;
+    height: 20%;
+    border-bottom: 2px solid black;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 10px 1px black;
 }
 
 #buttons{
     justify-content: space-evenly;
-    margin-bottom: 20px;
-    height: 50%;
+    height: 80%;
 }
 
 #results{
     flex-direction: column;
     display: none;
     justify-content: none;
-    margin-bottom: 20px;
-    height: 50%;
+    height: 80%;
 }
 
 #enemy_figure, #marginer{
@@ -89,12 +92,11 @@ button{
 
 button:hover{
     box-shadow: 0 0 10px 1px black;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 @media all and (max-width: 500px){
     .box{
         width: 350px;
-        padding: 10px;
     }
 }
