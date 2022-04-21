@@ -4,13 +4,10 @@ const scissors = document.getElementById("scissors");
 const ur_figure = document.getElementById("ur_figure");
 const enemy_figure = document.getElementById("enemy_figure");
 const result = document.getElementById("result");
-const retur = document.getElementById("return");
+const ret = document.getElementById("return");
 
-const handleReturn =()=>{
-    location.href = "index.html";
-}
 
-retur.addEventListener("click", handleReturn);
+
 
 let valuator;
 const RockValue =()=>{
@@ -59,32 +56,59 @@ const handleHide =()=>{
         enemy = "nożyce";
     }
     enemy_figure.innerHTML = enemy;
+    
     if(enemy == value){
         result.innerHTML = "remis";
+        enemy_figure.style.color = "black";
+        ur_figure.style.color = "black";
+        result.style.color = "black";
     }
     else if(enemy == "nożyce" && value == "papier"){
         result.innerHTML = "Przegrałeś";
+        enemy_figure.style.color = "green";
+        ur_figure.style.color = "red";
+        result.style.color = "red";
     }
     else if(enemy == "papier" && value == "kamień"){
         result.innerHTML = "Przegrałeś";
+        enemy_figure.style.color = "green";
+        ur_figure.style.color = "red";
+        result.style.color = "red";
     }
     else if(enemy == "kamień" && value == "nożyce"){
         result.innerHTML = "Przegrałeś";
+        enemy_figure.style.color = "green";
+        ur_figure.style.color = "red";
+        result.style.color = "red";
     }
     else if(enemy == "nożyce" && value == "kamień"){
         result.innerHTML = "Wygrałeś";
+        enemy_figure.style.color = "red";
+        ur_figure.style.color = "green";
+        result.style.color = "green";
     }
     else if(enemy == "papier" && value == "nożyce"){
         result.innerHTML = "Wygrałeś";
+        enemy_figure.style.color = "red";
+        ur_figure.style.color = "green";
+        result.style.color = "green";
     }
     else if(enemy == "kamień" && value == "papier"){
         result.innerHTML = "Wygrałeś";
+        enemy_figure.style.color = "red";
+        ur_figure.style.color = "green";
+        result.style.color = "green";
     }
     
 }
 
+const Repeat =()=>{
+    document.getElementById("buttons").style.display = "flex";
+    document.getElementById("results").style.display = "none";
+}
 
 
 rock.addEventListener("click", handleHide);
 paper.addEventListener("click", handleHide);
 scissors.addEventListener("click", handleHide);
+ret.addEventListener("click", Repeat);
