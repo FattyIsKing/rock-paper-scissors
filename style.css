@@ -12,6 +12,7 @@ body{
     width: 100%;
     background-image: url(./mustafar.jpg);
     background-size: cover;
+    overflow: hidden;
 }
 
 .wrapper{
