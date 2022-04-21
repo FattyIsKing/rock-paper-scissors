@@ -12,7 +12,6 @@ body{
     width: 100%;
     background-image: url(./mustafar.jpg);
     background-size: cover;
-    overflow: hidden;
 }
 
 .wrapper{
@@ -86,4 +85,11 @@ button{
 
 button:hover{
     box-shadow: 0 0 10px 1px black;
+}
+
+@media all and (max-width: 500px){
+    .box{
+        width: 350px;
+        padding: 10px;
+    }
 }
