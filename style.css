@@ -82,13 +82,14 @@ button{
     border: 2px solid black;
     color: white;
     background-color: black;
-    transition: 0.5s;
+    transition: 0.1s;
     font-weight: 600;
     cursor: pointer;
 }
 
 button:hover{
     box-shadow: 0 0 10px 1px black;
+    transform: translateY(-5px);
 }
 
 @media all and (max-width: 500px){
